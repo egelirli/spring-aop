@@ -1,4 +1,4 @@
-package com.egeliirli.spring.aop.springaop.aop;
+package com.egeliirli.spring.aop.springaop.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;

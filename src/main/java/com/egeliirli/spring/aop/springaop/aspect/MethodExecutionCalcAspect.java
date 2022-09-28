@@ -1,4 +1,4 @@
-package com.egeliirli.spring.aop.springaop.aop;
+package com.egeliirli.spring.aop.springaop.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -20,7 +20,9 @@ public class MethodExecutionCalcAspect {
 	//execution(* PACAKAGE.*.*(..))
 	//Waeving & weaver
 	
-	@Around("execution(*  com.egeliirli.spring.aop.springaop.business.*.*(..))")
+	//@Around("execution(*  com.egeliirli.spring.aop.springaop.business.*.*(..))")
+	//@Around("com.egeliirli.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecuiton()")
+	@Around("com.egeliirli.spring.aop.springaop.aspect.CommonJoinPointConfig.trackTimeAnnotation()")
 	public void around(ProceedingJoinPoint joinPoint) throws Throwable {
 		//Advise 
 		long startTime = System.currentTimeMillis();

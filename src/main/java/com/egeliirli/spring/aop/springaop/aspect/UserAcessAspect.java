@@ -1,4 +1,4 @@
-package com.egeliirli.spring.aop.springaop.aop;
+package com.egeliirli.spring.aop.springaop.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -15,7 +15,8 @@ public class UserAcessAspect {
 	//What kind of methods calls I would intercept
 	//execution(* PACAKAGE.*.*(..))
 	//Waeving & weaver
-	@Before("execution(*  com.egeliirli.spring.aop.springaop..*(..))") //Pointcut
+	//@Before("execution(*  com.egeliirli.spring.aop.springaop..*(..))") //Pointcut
+	@Before("com.egeliirli.spring.aop.springaop.aspect.CommonJoinPointConfig.dataLayerExecuiton()")
 	public void before(JoinPoint jointPoint) {
 		//Advise //Pintcut
 		 logger.info(" Check for user access rights");
